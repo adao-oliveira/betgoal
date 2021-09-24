@@ -28,6 +28,6 @@
     min-width: 100%;
 }
 
-.container h5 {
+.container h5, p {
     color: #fff !important;
 }
