@@ -1,0 +1,67 @@
+.img-banner{
+    width: 100%;
+    min-height: 300px;
+    max-height: 460px;
+}
+
+.box-info{
+    background-color: #fbc514;
+    color: #fff;
+    display: flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+
+}
+
+.btn-editar i{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    color: #fff;
+    transition: .3s ease-in;
+}
+
+.btn-editar i:hover{
+    color: #fbc514;
+}
+
+.titulo, h5, .visualiacoes{
+    color: #fff;
+}
+
+/* ----------- Aposta Item ----------------- */
+@import url("../utils/apostaItem/apostaItem.css");
+
+.delete-all{
+    text-align: right;
+    margin: 20px;
+}
+.delete-all input{
+    height: 25px;
+    width: 25px;
+    transform: translateY(5px);
+    margin: 0 15px;
+}
+.delete-all span{
+    text-transform: uppercase;
+    color: #111;
+    letter-spacing: 1.3px;
+}
+.delete-all button{
+    border: 1px solid #111;
+    padding: 10px 25px;
+    color: #111;
+    text-transform: uppercase;
+}
+
+/* -------------------- Load More --------------- */
+.load_more{
+    text-align: center;
+}
+.load_more button{
+    padding: 10px 25px;
+    margin-bottom: 20px;
+    border: 1px solid #555;
+    text-transform: capitalize;
+}
