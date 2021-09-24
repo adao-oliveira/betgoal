@@ -1,5 +1,5 @@
 import React from 'react'
-import emailjs from "emailjs-com";
+import emailjs from "emailjs-com"
 
 function sendEmailAposta(e) {
   e.preventDefault();
@@ -30,6 +30,9 @@ export const SendAposta = () => (
             <div className="input-block">
               <input type='name' name="from_pix" id="from_pix" placeholder="Informe seu PIX" required />
             </div>
+            <div className="input-block">
+              <textarea type='mensagem' name="from_mensagem" id="from_mensagem" placeholder="Deixe uma mensagem..." required />
+            </div>
             <button type='submit' className="btn-enviar mt-4">Enviar Aposta</button>
           </form>
         </div>
@@ -38,9 +41,7 @@ export const SendAposta = () => (
     <style jsx>{`
 
 .fundo {
-  background-image: url('https://res.cloudinary.com/robles-identity/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1629065495/Kerfin7-NEA-2262_vxaua6.jpg');
-  background-repeat: no-repeat;
-  width: 900px;
+  background-color: #1b8231;
 }
 
     section {
@@ -54,7 +55,7 @@ export const SendAposta = () => (
     h1 {
       padding-top: 40px;
       color: #fff;
-      font-size: 20px;
+      font-size: 25px;
       font-weight: 200;
       text-align: center;
       font-family: 'Courier New', Courier, monospace;
@@ -62,7 +63,7 @@ export const SendAposta = () => (
     
     .form-wrapper form {
       margin: 20px 0;
-      background-color: white;
+      background-color: #111;
       padding: 30px 25px;
       border-radius: 5px;
     }
@@ -90,12 +91,27 @@ export const SendAposta = () => (
       background: #ffffff;
       box-shadow: inset 9px 9px 19px #d9d9d9, inset -9px -9px 19px #ffffff;
     }
+
+    textarea {
+      font-family: 'Courier New', Courier, monospace;
+      min-width: 30vw;
+      margin: 10px auto;
+      padding: 20px;
+      border-radius: 5px;
+      outline-color: #fff;
+      background-color: #fff !important;
+      color: #111 !important;
+    }
+
+    textarea::placeholder {
+      color: #111;
+    }
     
   .btn-enviar {
       display: block;
       min-width: 150px;
       border: none;
-      background-color: #1d20ff;
+      background-color: #eaa800;
       color: white;
       border-radius: 25px;
       margin: auto;
@@ -103,7 +119,7 @@ export const SendAposta = () => (
     }
   
   .btn-enviar:hover {
-      background-color: rgb(231, 28, 147);
+      background-color: #1b8231;
     }
 
 `}</style>
@@ -111,3 +127,5 @@ export const SendAposta = () => (
   </>
 
 )
+
+export default SendAposta

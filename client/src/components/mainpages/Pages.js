@@ -8,6 +8,7 @@ import NotFound from './utils/not_found/NotFound'
 import publicarAposta from './publicarAposta/index'
 import editarAposta from './editarAposta/index'
 import Aposta from './home/aposta'
+import sendAposta from './sendAposta'
 
 import {GlobalState} from '../../GlobalState'
 
@@ -30,6 +31,7 @@ function Pages() {
             <Route path="/editar_aposta/:id" exact component={isAdmin ? publicarAposta : NotFound} />
             <Route path="/editarAposta" exact component={isAdmin ? editarAposta : NotFound} />
             <Route path="/aposta" exact component={Aposta} />
+            <Route path="/sendAposta" exact component={sendAposta} />
 
             <Route path="*" exact component={NotFound} />
         </Switch>

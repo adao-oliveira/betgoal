@@ -1,6 +1,7 @@
 import React, { useContext, useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { GlobalState } from '../../../GlobalState'
+import SendAposta from '../sendAposta'
 
 function DetalhesAposta() {
     const params = useParams()
@@ -31,12 +32,12 @@ function DetalhesAposta() {
                     <table className="row mt-5 d-flex justify-content-around">
                         <tr>
                             <td>
-                                <img src="https://cdn-icons-png.flaticon.com/512/126/126157.png" style={{ height: '100px', marginRight:'30px' }} />
+                                <img src="https://cdn-icons-png.flaticon.com/512/126/126157.png" style={{ height: '100px', marginRight: '30px' }} />
                             </td>
 
                             <td>
-                                <h5><strong>Taxa</strong></h5>
-                                <span className="mt-3">{detalhesAposta.taxaAposta}</span>
+                                <h5 style={{fontSize:'30px'}}><strong>Taxa</strong></h5>
+                                <span className="mt-3" style={{fontSize:'30px'}}>R${detalhesAposta.taxaAposta}</span>
                                 <b />
                             </td>
                         </tr>
@@ -50,11 +51,10 @@ function DetalhesAposta() {
                         <div className="col-12 text-center">
                             <p>{detalhesAposta.descricao}</p>
                         </div>
-
-
                     </div>
                 </div>
 
+                <SendAposta />
 
             </div>
 

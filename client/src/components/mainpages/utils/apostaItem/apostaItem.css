@@ -6,6 +6,10 @@
 .btn-detalhes{
     background-color: #111;
     color: #fff;
+    height: 40px;
+    width: 130px;
+    font-size: 20px;
+    text-transform: uppercase;
 }
 
 .btn-detalhes:hover{
@@ -22,5 +26,8 @@
 .img-cartao{
     height: 190px;
     min-width: 100%;
+}
 
+.container h5 {
+    color: #fff !important;
 }

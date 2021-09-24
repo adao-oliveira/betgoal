@@ -35,7 +35,7 @@ function Navbar() {
 
             <div className="logo">
                 <Link to="/">
-                    <img src="https://res.cloudinary.com/beatgoal/image/upload/v1632338434/1632333585103_xkrolv.png" alt="logo_iv_online" style={{ height: '100px' }} />
+                    <img src="https://res.cloudinary.com/beatgoal/image/upload/v1632443859/1632443770149_ziteuo.png" alt="logo_iv_online" style={{ height: '100px' }} />
                 </Link>
             </div>
 
