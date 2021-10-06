@@ -9,6 +9,8 @@ import publicarAposta from './publicarAposta/index'
 import editarAposta from './editarAposta/index'
 import Aposta from './home/aposta'
 import sendAposta from './sendAposta'
+import Cart from './cart/Cart'
+
 
 import {GlobalState} from '../../GlobalState'
 
@@ -32,6 +34,8 @@ function Pages() {
             <Route path="/editarAposta" exact component={isAdmin ? editarAposta : NotFound} />
             <Route path="/aposta" exact component={Aposta} />
             <Route path="/sendAposta" exact component={sendAposta} />
+
+            <Route path="/cart" exact component={Cart} />
 
             <Route path="*" exact component={NotFound} />
         </Switch>

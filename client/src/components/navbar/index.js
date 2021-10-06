@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import { GlobalState } from '../../GlobalState'
+import Money from './icon/money.svg'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 
@@ -7,6 +8,7 @@ function Navbar() {
     const state = useContext(GlobalState)
     const [isLogged] = state.userAPI.isLogged
     const [isAdmin] = state.userAPI.isAdmin
+    const [cart] = state.userAPI.cart
 
     const logoutUser = async () => {
         await axios.get('/user/logout')
@@ -88,6 +90,12 @@ function Navbar() {
                         }
                     </li>
 
+                    <div className="cart-icon">
+                        <span>{cart.length}</span>
+                        <Link to="/cart">
+                            <img src={Money} alt="" width="70" />
+                        </Link>
+                    </div>
                 </ul>
             </div>
 

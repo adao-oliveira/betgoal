@@ -29,5 +29,16 @@
 }
 
 .container h5, p {
+    color: #111 !important;
+}
+
+#btn_buy{
+    /* margin-right: 5px; */
     color: #fff !important;
+    list-style: none;
+    text-decoration: none;
+}
+
+#btn_buy:hover {
+    color: #111 !important;
 }

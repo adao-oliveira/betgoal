@@ -22,6 +22,9 @@ export const SendAposta = () => (
         <div className="form-wrapper">
           <form onSubmit={sendEmailAposta}>
             <div className="input-block">
+              <input type="email" name="from_email" id="from_email" placeholder="Seu melhor e-mail" required />
+            </div>
+            <div className="input-block">
               <input type='name' name="from_name" id="from_name" placeholder="Nome completo" required />
             </div>
             <div className="input-block">

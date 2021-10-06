@@ -7,6 +7,7 @@ function DetalhesAposta() {
     const params = useParams()
     const state = useContext(GlobalState)
     const [apostar] = state.apostaAPI.apostar
+    const addCart = state.userAPI.addCart
     const [detalhesAposta, setDetalhesAposta] = useState([])
 
     useEffect(() => {
@@ -36,8 +37,8 @@ function DetalhesAposta() {
                             </td>
 
                             <td>
-                                <h5 style={{fontSize:'30px'}}><strong>Taxa</strong></h5>
-                                <span className="mt-3" style={{fontSize:'30px'}}>R${detalhesAposta.taxaAposta}</span>
+                                <h5 style={{ fontSize: '30px' }}><strong>Taxa</strong></h5>
+                                <span className="mt-3" style={{ fontSize: '30px' }}>R${detalhesAposta.taxaAposta}</span>
                                 <b />
                             </td>
                         </tr>
@@ -50,12 +51,16 @@ function DetalhesAposta() {
                         </div>
                         <div className="col-12 text-center">
                             <p>{detalhesAposta.descricao}</p>
+
+                            <button type="button" className="btn btn-danger mb-4" style={{ borderRadius: '5px', outline: 'none', height: '40px', color: '#fff' }}>
+                                <Link to="/cart" className="cart"
+                                    onClick={() => addCart(detalhesAposta)}>
+                                    Adicionar
+                                </Link>
+                            </button>
                         </div>
                     </div>
                 </div>
-
-                <SendAposta />
-
             </div>
 
         </>
