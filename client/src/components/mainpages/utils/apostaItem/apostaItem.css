@@ -12,6 +12,15 @@
     text-transform: uppercase;
 }
 
+.btn-detalhesAposta{
+    background-color: #111;
+    color: #fff;
+    height: 40px;
+    width: 150px;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
 .btn-detalhes:hover{
     background-color: #fbc514;
     color: #111;

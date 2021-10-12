@@ -25,7 +25,7 @@ function DetalhesAposta() {
         <>
             <div className="container-fluid">
                 <div className="row">
-                    <img src={detalhesAposta.images.url} className="img-banner" alt="Banner" />
+                    {/* <img src={detalhesAposta.images.url} className="img-banner" alt="Banner" /> */}
                     <h3 className="mx-auto mt-5 titulo" style={{ textTransform: 'uppercase' }}><strong>{detalhesAposta.titulo}</strong></h3>
                 </div>
 

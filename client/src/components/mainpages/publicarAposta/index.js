@@ -132,7 +132,7 @@ function PublicarAposta() {
 
                     <div className="form-group">
                         <label>Taxa da Aposta:</label>
-                        <input className="form-control" type="text" name="taxaApostaCasa" id="taxaApostaCasa" required value={aposta.taxaApostaCasa} onChange={handleChangeInput} placeholder="-- Taxa da Aposta --" />
+                        <input className="form-control" type="text" name="taxaAposta" id="taxaAposta" required value={aposta.taxaAposta} onChange={handleChangeInput} placeholder="-- Taxa da Aposta --" />
                     </div>
 
                     <div className="form-group">

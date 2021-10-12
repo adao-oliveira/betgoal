@@ -76,8 +76,8 @@ function ApostaItem({ aposta, isAdmin, deleteAposta, handleCheck }) {
                                             </>
                                             : <>
                                                 <div className="col-6 mr-2">
-                                                    <Link className="btn btn-sm btn-detalhes" to="#!" onClick={() => addCart(aposta)}>
-                                                        <spam className="inline mr-2">Adicionar</spam>
+                                                    <Link className="btn btn-sm btn-detalhesAposta" to="#!" onClick={() => addCart(aposta)}>
+                                                        <spam className="inline mr-2" style={{width:'160px'}}>Adicionar</spam>R${aposta.taxaAposta}
                                                     </Link>
                                                 </div>
                                                 {/* <div className="col-6">
