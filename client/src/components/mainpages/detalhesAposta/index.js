@@ -47,11 +47,6 @@ function DetalhesAposta() {
 
                     <div className="row box-detalhes mt-5">
                         <div className="col-12 text-center">
-                            <h5><strong>Detalhes da Aposta</strong></h5>
-                        </div>
-                        <div className="col-12 text-center">
-                            <p>{detalhesAposta.descricao}</p>
-
                             <button type="button" className="btn btn-danger mb-4" style={{ borderRadius: '5px', outline: 'none', height: '40px', color: '#fff' }}>
                                 <Link to="/cart" className="cart"
                                     onClick={() => addCart(detalhesAposta)}>

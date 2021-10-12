@@ -19,8 +19,8 @@
 
 .delete{
     position: absolute;
-    top: -5px;
-    right: 5px;
+    top: -15px;
+    left: 390px;
     color: #1b8231;
     font-weight: 900;
     cursor: pointer;

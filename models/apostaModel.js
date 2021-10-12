@@ -12,10 +12,6 @@ const apostaSchema = new mongoose.Schema({
         trim: true,
         required: true
     },
-    descricao:{
-        type: String,
-        required: true
-    },
     images:{
         type: Object,
         required: true

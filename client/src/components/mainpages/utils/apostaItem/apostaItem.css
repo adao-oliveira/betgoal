@@ -7,8 +7,8 @@
     background-color: #111;
     color: #fff;
     height: 40px;
-    width: 130px;
-    font-size: 20px;
+    width: 100px;
+    font-size: 15px;
     text-transform: uppercase;
 }
 
@@ -30,6 +30,7 @@
 
 .container h5, p {
     color: #111 !important;
+    font-size: 15px;
 }
 
 #btn_buy{

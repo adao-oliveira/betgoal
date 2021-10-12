@@ -12,7 +12,7 @@ function Cart() {
     useEffect(() => {
         const getTotal = () => {
             const total = cart.reduce((prev, item) => {
-                return prev + (item.taxaAposta * item.quantity)
+                return prev + (item.taxaApostaCasa * item.quantity)
             }, 0)
 
             setTotal(total)
@@ -90,15 +90,11 @@ function Cart() {
                                 onClick={() => removeApostar(aposta._id)}>
                                 X
                             </div>
-                            <img className="img-fluid w-100" src={aposta.images.url} alt="" />
+                            <h2 className="text-uppercase" style={{color:'#111'}}>{aposta.titulo}</h2>
                         </div>
 
                         <div className="col-md-4 my-3 text-center text-uppercase">
                             <div className="box-detail">
-                                <h2>{aposta.titulo}</h2>
-
-                                <h3>$ {aposta.taxaAposta * aposta.quantity}</h3>
-                                <p>{aposta.descricao}</p>
 
                                 <div className="amount">
                                     <button onClick={() => decrement(aposta._id)}> - </button>
@@ -118,7 +114,7 @@ function Cart() {
 
             <form>
                 <div className="text-center">
-                    <h3 className="mt-8" style={{ fontSize: '40px' }}>Pagamento</h3>
+                    <h2 className="mt-8" style={{ fontSize: '40px', color:'#111' }}>Pagamento</h2>
 
                     {/* <!-- Botão para acionar modal --> */}
                     <button type="button" class="btn" data-toggle="modal" data-target="#modalExemplo">

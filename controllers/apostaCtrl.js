@@ -65,7 +65,7 @@ const apostaCtrl = {
     },
     publicarAposta: async(req, res) =>{
         try {
-            const {titulo, descricao, taxaAposta, images} = req.body;
+            const {titulo, taxaAposta, images} = req.body;
             if(!images) return res.status(400).json({msg: "Sem upload de imagem"})
 
             const aposta = await Aposta.findOne({titulo})
@@ -73,7 +73,7 @@ const apostaCtrl = {
                 return res.status(400).json({msg: "Esta aposta já foi publicada"})
 
             const newAposta = new Aposta({
-               titulo: titulo.toLowerCase(), descricao, taxaAposta, images
+               titulo: titulo.toLowerCase(), taxaAposta, images
             })
 
             await newAposta.save()
@@ -93,11 +93,11 @@ const apostaCtrl = {
     },
     updateAposta: async(req, res) =>{
         try {
-            const {titulo, descricao, taxaAposta, images} = req.body;
+            const {titulo, taxaAposta, images} = req.body;
             if(!images) return res.status(400).json({msg: "Sem upload de imagem"})
 
             await Aposta.findOneAndUpdate({_id: req.params.id}, {
-                titulo: titulo.toLowerCase(), descricao, taxaAposta, images
+                titulo: titulo.toLowerCase(), taxaAposta, images
             })
 
             res.json({msg: "Aposta atualizada"})
