@@ -3,7 +3,7 @@
     transform: scaleY(0.98);
 }
 .amount button{
-    width: 50%;
+    width: 80px;
     height: 40px;
     background-color: crimson;
     border-radius: 5px;

@@ -9,18 +9,18 @@ function Cart() {
     const [token] = state.token
     const [total, setTotal] = useState(0)
 
-    useEffect(() =>{
-        const getTotal = () =>{
+    useEffect(() => {
+        const getTotal = () => {
             const total = cart.reduce((prev, item) => {
                 return prev + (item.taxaAposta * item.quantity)
-            },0)
+            }, 0)
 
             setTotal(total)
         }
 
         getTotal()
 
-    },[cart])
+    }, [cart])
 
     const addToCart = async (cart) => {
         await axios.patch('/user/addcart', { cart }, {
@@ -56,30 +56,35 @@ function Cart() {
         return <h2 style={{ textAlign: "center", fontSize: "5rem" }}>Sem apostas</h2>
 
     return (
-        <div className="row mx-auto mt-32" style={{ paddingTop: '50px' }}>
-            <div className="col-md-8 text-dark table-responsive my-3">
-                <table className="table my-3">
-                    <tbody>
-                        {
-                            cart.map(aposta => (
-                                <div className="detail cart row mx-auto" key={aposta._id}>
-
-                                    <div className="col-md-8 text-dark table-responsive my-3">
-                                        <h2 className="text-uppercase" style={{ color: '#111', textAlign:'center' }}>{aposta.titulo}</h2>
-                                    </div>
-
-                                    <div className="col-md-4 my-3 text-center">
-                                        <div className="box-detail">
-                                            <div className="amount">
-                                                <button className="text-uppercase" onClick={() => removeApostar(aposta._id)}>Remover</button>
+        <div className="row mx-auto">
+            <div className="col-md-8 table-responsive my-3">
+                {
+                    cart.map(aposta => (
+                        <div className="detail cart row mx-auto" key={aposta._id}>
+                            <table class="table table-sm table-borderless">
+                                <tbody className="thead-dark">
+                                    <tr>
+                                        <th>
+                                            <div className="col-md-10">
+                                                <h2 className="text-uppercase" style={{ color: '#1b8231', fontSize: '15px' }}>{aposta.titulo}</h2>
                                             </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            ))
-                        }
-                    </tbody>
-                </table>
+                                        </th>
+
+                                        <th>
+                                            <div className="col-md-2 text-center">
+                                                <div className="box-detail">
+                                                    <div className="amount">
+                                                        <button className="text-uppercase" onClick={() => removeApostar(aposta._id)}>Remover</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </th>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    ))
+                }
             </div>
 
             <div className="col-md-4 my-3 text-center text-uppercase text-dark">
@@ -90,7 +95,7 @@ function Cart() {
 
                         {/* <!-- Botão para acionar modal --> */}
                         <button type="button" class="btn" data-toggle="modal" data-target="#modalExemplo">
-                            <a className="btn my-2 form-control mb-2" style={{backgroundColor:'crimson'}}>PIX</a>
+                            <a className="btn my-2 form-control mb-2" style={{ backgroundColor: 'crimson' }}>PIX</a>
                         </button>
 
                         {/* <!-- Modal --> */}
@@ -135,7 +140,7 @@ function Cart() {
                             <p className="mt-4 text-danger">Atenção: PREENCHA O FORMULÁRIO ABAIXO E FAÇA O PIX COM O VALOR TOTAL DA SUA APOSTA PARA QUE SEJA VALIDADO.</p>
                         </div>
 
-                        <button type="button" className="btn mb-4" style={{ borderRadius: '5px', height: '40px', color: '#fff', backgroundColor:'crimson' }}>
+                        <button type="button" className="btn mb-4" style={{ borderRadius: '5px', height: '40px', color: '#fff', backgroundColor: 'crimson' }}>
                             <Link to="/sendAposta">PREENCHER FORMULÁRIO</Link>
                         </button>
                     </div>
