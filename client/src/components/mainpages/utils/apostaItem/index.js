@@ -91,13 +91,6 @@ function ApostaItem({ aposta, isAdmin, deleteAposta, handleCheck }) {
                             </td>
                         </tr>
                     </tbody>
-                    <tbody>
-                        <tr>
-                            <td colspan="3">
-                                <h5>$ {total}</h5>
-                            </td>
-                        </tr>
-                    </tbody>
                 </table>
             </div>
 
