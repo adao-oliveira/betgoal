@@ -2,29 +2,16 @@
     position: relative;
     transform: scaleY(0.98);
 }
-.amount span{
-    color: #1b8231;
-    padding: 0 20px;
-}
 .amount button{
-    width: 40px;
+    width: 50%;
     height: 40px;
-    border: 1px solid #1b8231;
+    background-color: crimson;
+    border-radius: 5px;
 }
 
 .amount button:hover {
     color: #111;
     border: 1px solid #111;
-}
-
-.delete{
-    position: absolute;
-    top: -15px;
-    left: 390px;
-    color: #1b8231;
-    font-weight: 900;
-    cursor: pointer;
-    font-size: 30px;
 }
 .total{
     width: 100%;

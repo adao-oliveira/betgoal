@@ -6,7 +6,7 @@ function sendEmailAposta(e) {
 
   emailjs.sendForm('default_service', 'template_15595bq', e.target, 'user_k1rVZVH5xCEoZIyG4E9RI')
     .then((result) => {
-      alert("E-mail enviado com sucesso");
+      alert("E-mail enviado com sucesso, aguarde os resultados!");
     }, (error) => {
       alert("Ocorreu um erro inesperado, verifique os dados e tente novamente!");
     });
@@ -34,7 +34,7 @@ export const SendAposta = () => (
               <input type='name' name="from_pix" id="from_pix" placeholder="Informe seu PIX" required />
             </div>
             <div className="input-block">
-              <textarea type='mensagem' name="from_mensagem" id="from_mensagem" placeholder="Deixe uma mensagem..." required />
+              <textarea type='mensagem' name="from_mensagem" id="from_mensagem" placeholder="Em qual time apostou?" required />
             </div>
             <button type='submit' className="btn-enviar mt-4">Enviar Aposta</button>
           </form>

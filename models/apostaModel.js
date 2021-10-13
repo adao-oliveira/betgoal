@@ -8,7 +8,7 @@ const apostaSchema = new mongoose.Schema({
         required: true
     },
     taxaAposta:{
-        type: String,
+        type: Number,
         trim: true,
         required: true
     },

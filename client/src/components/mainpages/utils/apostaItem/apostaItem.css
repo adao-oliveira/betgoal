@@ -21,7 +21,7 @@
     text-transform: uppercase;
 }
 
-.btn-detalhes:hover{
+.btn-detalhes, .btn-detalhesAposta:hover{
     background-color: #fbc514;
     color: #111;
 }
